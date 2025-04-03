@@ -1,9 +1,25 @@
-import NumPy as np
+import numpy as np
 
-matriz = np.array([[1, 2], [3, 4]])
+print("Ingrese los elementos de la matriz 2x2:")
+
+matriz = []
+for i in range(2):
+    fila = []
+    for j in range(2):
+        valor = int(input(f"Ingrese el valor en la posición en la matriz ({i+1},{j+1}): "))
+        fila.append(valor)
+    matriz.append(fila)
+
+
+matriz = np.array(matriz)
+
 
 Mtranspuesta = matriz.T
 
 
-print("Matriz Normal:\n", matriz)
-print("Matriz Transpuesta:\n", Mtranspuesta)
+print("\nMatriz Normal:")
+print(matriz)
+
+print("\nMatriz Transpuesta:")
+print(Mtranspuesta)
+
